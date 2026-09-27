@@ -1,34 +1,36 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mon Premier Site</title>
+    <title>Mon Site Professionnel</title>
 
     <style>
 
-        /* ===== STYLE GENERAL ===== */
-
-        body {
-            background-color: lightblue;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
         }
 
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            color: #222;
+        }
 
-        /* ===== MENU ===== */
+        /* MENU */
 
         nav {
-            background-color: darkblue;
-            padding: 15px;
-            margin-bottom: 25px;
-            border-radius: 10px;
+            background-color: #0b1f3a;
+            padding: 18px 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
@@ -36,52 +38,136 @@
             text-decoration: none;
             margin: 0 8px;
             font-size: 14px;
+            font-weight: bold;
         }
 
+        nav a:hover {
+            text-decoration: underline;
+        }
 
-        /* ===== CARTE PRINCIPALE ===== */
+        /* SECTION */
 
-        .card {
-            background-color: white;
-            padding: 30px;
-            border-radius: 20px;
-            max-width: 500px;
+        section {
+            max-width: 900px;
             margin: auto;
+            padding: 60px 20px;
         }
 
+        /* ACCUEIL */
 
-        /* ===== TITRES ===== */
-
-        h1 {
-            color: darkblue;
-            font-size: 30px;
+        .hero {
+            background-color: #0b1f3a;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
         }
 
-        h2 {
-            color: darkblue;
-            margin-top: 30px;
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
         }
 
-
-        /* ===== PARAGRAPHES ===== */
-
-        p {
-            color: black;
-            font-size: 18px;
+        .hero p {
+            font-size: 19px;
             line-height: 1.6;
         }
 
-
-        /* ===== BOUTON ===== */
-
-        button {
-            background-color: darkblue;
+        .button {
+            display: inline-block;
+            background-color: #25d366;
             color: white;
-            border: none;
-            padding: 12px 25px;
+            text-decoration: none;
+            padding: 14px 25px;
             border-radius: 10px;
-            font-size: 16px;
-            margin-top: 15px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        /* TITRES */
+
+        h2 {
+            text-align: center;
+            color: #0b1f3a;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        p {
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        /* SERVICES */
+
+        .services {
+            display: grid;
+            gap: 20px;
+        }
+
+        .service {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .service h3 {
+            color: #0b1f3a;
+        }
+
+        /* PORTFOLIO */
+
+        .project {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+        }
+
+        /* TARIFS */
+
+        .price {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .price h3 {
+            color: #0b1f3a;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+            background-color: #eaf2ff;
+            border-radius: 20px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background-color: #0b1f3a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* TELEPHONE */
+
+        @media (max-width: 600px) {
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+
         }
 
     </style>
@@ -92,7 +178,7 @@
 <body>
 
 
-    <!-- ===== MENU ===== -->
+    <!-- MENU -->
 
     <nav>
 
@@ -102,81 +188,208 @@
 
         <a href="#services">Services</a>
 
+        <a href="#portfolio">Réalisations</a>
+
+        <a href="#tarifs">Tarifs</a>
+
         <a href="#contact">Contact</a>
 
     </nav>
 
 
-    <!-- ===== CONTENU PRINCIPAL ===== -->
+    <!-- ACCUEIL -->
 
-    <div class="card">
+    <div class="hero" id="accueil">
 
-
-        <!-- ACCUEIL -->
-
-        <h1 id="accueil">
-            Bienvenue sur mon site
-        </h1>
+        <h1>Bienvenue sur mon site</h1>
 
         <p>
-            Bonjour ! Ceci est mon premier site web.
+            Création de sites web et services numériques
+            pour particuliers et petites entreprises.
         </p>
 
+        <a class="button"
+           href="https://wa.me/261388118935"
+           target="_blank">
 
-        <!-- À PROPOS -->
-
-        <h2 id="apropos">
-            À propos de moi
-        </h2>
-
-        <p>
-            Je suis étudiant en Gestion.
-            Je m'intéresse au développement web
-            et à la création d'entreprise.
-        </p>
-
-
-        <!-- SERVICES -->
-
-        <h2 id="services">
-            Mes services
-        </h2>
-
-        <p>
-            💻 Création de sites web
-        </p>
-
-        <p>
-            📱 Services numériques
-        </p>
-
-        <p>
-            📚 Accompagnement et formation
-        </p>
-
-
-        <!-- CONTACT -->
-
-        <h2 id="contact">
-            Contact
-        </h2>
-
-        <p>
-            Vous pouvez me contacter sur WhatsApp.
-        </p>
-
-        <a href="https://wa.me/261388118935" target="_blank">
-
-            <button>
-                Contactez-moi
-            </button>
+            Me contacter sur WhatsApp
 
         </a>
-
 
     </div>
 
 
+    <!-- À PROPOS -->
+
+    <section id="apropos">
+
+        <h2>À propos de moi</h2>
+
+        <p>
+            Je suis étudiant en Gestion et je m'intéresse
+            au développement web, aux services numériques
+            et à la création d'entreprise.
+        </p>
+
+        <p>
+            Mon objectif est de proposer des solutions
+            simples et accessibles aux particuliers,
+            étudiants et petites entreprises.
+        </p>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section id="services">
+
+        <h2>Mes services</h2>
+
+        <div class="services">
+
+            <div class="service">
+
+                <h3>💻 Création de sites web</h3>
+
+                <p>
+                    Création de sites vitrines simples,
+                    modernes et adaptés aux téléphones.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <h3>📱 Services numériques</h3>
+
+                <p>
+                    Aide dans la création de pages web,
+                    présentation de projets et solutions
+                    numériques simples.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <h3>📚 Accompagnement</h3>
+
+                <p>
+                    Accompagnement pour les débutants
+                    qui souhaitent apprendre les bases
+                    du développement web.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PORTFOLIO -->
+
+    <section id="portfolio">
+
+        <h2>Mes réalisations</h2>
+
+        <div class="project">
+
+            <h3>🌐 Mon premier site web</h3>
+
+            <p>
+                Site créé avec HTML et CSS dans le cadre
+                de mon apprentissage du développement web.
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>🚀 Prochain projet</h3>
+
+            <p>
+                Cette section sera mise à jour avec mes
+                prochaines réalisations.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- TARIFS -->
+
+    <section id="tarifs">
+
+        <h2>Mes tarifs</h2>
+
+        <div class="price">
+
+            <h3>Site vitrine</h3>
+
+            <p>
+                Prix sur demande
+            </p>
+
+            <p>
+                Contactez-moi pour discuter de votre projet.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <div class="contact">
+
+            <h2>Contact</h2>
+
+            <p>
+                Vous avez un projet ou une question ?
+            </p>
+
+            <p>
+                Contactez-moi directement sur WhatsApp.
+            </p>
+
+            <a class="button"
+               href="https://wa.me/261388118935"
+               target="_blank">
+
+                WhatsApp
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Mon Site Professionnel
+        </p>
+
+        <p>
+            Créé avec HTML & CSS
+        </p>
+
+    </footer>
+
+
 </body>
 
-          </html>
+    </html>
+        
