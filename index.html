@@ -1,12 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mon Site Professionnel</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Fetra Mamisoa Julien | Gestion & Services numériques</title>
 
     <style>
 
@@ -22,7 +24,7 @@
             color: #222;
         }
 
-        /* MENU */
+        /* ===== MENU ===== */
 
         nav {
             background-color: #0b1f3a;
@@ -36,41 +38,55 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 8px;
+            margin: 6px 9px;
             font-size: 14px;
             font-weight: bold;
+            display: inline-block;
         }
 
         nav a:hover {
             text-decoration: underline;
         }
 
-        /* SECTION */
 
-        section {
-            max-width: 900px;
-            margin: auto;
-            padding: 60px 20px;
-        }
-
-        /* ACCUEIL */
+        /* ===== ACCUEIL ===== */
 
         .hero {
             background-color: #0b1f3a;
             color: white;
             text-align: center;
-            padding: 80px 20px;
+            padding: 65px 20px 80px;
+        }
+
+        /* PHOTO DE PROFIL */
+
+        .profile-photo {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-bottom: 25px;
         }
 
         .hero h1 {
-            font-size: 38px;
-            margin-bottom: 15px;
+            font-size: 34px;
+            margin: 10px 0;
+        }
+
+        .hero h2 {
+            color: #25d366;
+            font-size: 21px;
+            margin: 10px 0;
         }
 
         .hero p {
-            font-size: 19px;
-            line-height: 1.6;
+            font-size: 18px;
+            line-height: 1.7;
         }
+
+
+        /* ===== BOUTON ===== */
 
         .button {
             display: inline-block;
@@ -83,9 +99,20 @@
             font-weight: bold;
         }
 
-        /* TITRES */
+        .button:hover {
+            opacity: 0.9;
+        }
 
-        h2 {
+
+        /* ===== SECTIONS ===== */
+
+        section {
+            max-width: 900px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        h2.section-title {
             text-align: center;
             color: #0b1f3a;
             font-size: 30px;
@@ -97,7 +124,23 @@
             font-size: 17px;
         }
 
-        /* SERVICES */
+
+        /* ===== PROFIL ===== */
+
+        .profile-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .profile-card strong {
+            color: #0b1f3a;
+        }
+
+
+        /* ===== SERVICES ===== */
 
         .services {
             display: grid;
@@ -115,38 +158,48 @@
             color: #0b1f3a;
         }
 
-        /* PORTFOLIO */
+
+        /* ===== REALISATIONS ===== */
 
         .project {
             background-color: white;
             padding: 25px;
             margin-bottom: 20px;
             border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
         }
 
-        /* TARIFS */
+        .project h3 {
+            color: #0b1f3a;
+        }
+
+
+        /* ===== TARIFS ===== */
 
         .price {
             background-color: white;
-            padding: 25px;
-            margin-bottom: 20px;
+            padding: 30px;
             border-radius: 15px;
             text-align: center;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
         }
 
         .price h3 {
             color: #0b1f3a;
         }
 
-        /* CONTACT */
+
+        /* ===== CONTACT ===== */
 
         .contact {
             text-align: center;
             background-color: #eaf2ff;
+            padding: 35px 20px;
             border-radius: 20px;
         }
 
-        /* FOOTER */
+
+        /* ===== FOOTER ===== */
 
         footer {
             background-color: #0b1f3a;
@@ -155,17 +208,28 @@
             padding: 25px;
         }
 
-        /* TELEPHONE */
+        footer p {
+            margin: 5px;
+            font-size: 14px;
+        }
+
+
+        /* ===== TELEPHONE ===== */
 
         @media (max-width: 600px) {
 
             .hero h1 {
-                font-size: 30px;
+                font-size: 29px;
+            }
+
+            .profile-photo {
+                width: 140px;
+                height: 140px;
             }
 
             nav a {
-                display: inline-block;
-                margin: 6px;
+                font-size: 14px;
+                margin: 5px;
             }
 
         }
@@ -178,7 +242,7 @@
 <body>
 
 
-    <!-- MENU -->
+    <!-- ===== MENU ===== -->
 
     <nav>
 
@@ -188,7 +252,7 @@
 
         <a href="#services">Services</a>
 
-        <a href="#portfolio">Réalisations</a>
+        <a href="#realisations">Réalisations</a>
 
         <a href="#tarifs">Tarifs</a>
 
@@ -197,11 +261,23 @@
     </nav>
 
 
-    <!-- ACCUEIL -->
+    <!-- ===== ACCUEIL ===== -->
 
     <div class="hero" id="accueil">
 
-        <h1>Bienvenue sur mon site</h1>
+        <!-- PHOTO DE PROFIL -->
+
+        <img src="photo.jpg"
+             alt="Photo de profil de Fetra"
+             class="profile-photo">
+
+        <h1>
+            Fetra Mamisoa Julien
+        </h1>
+
+        <h2>
+            Étudiant en Gestion
+        </h2>
 
         <p>
             Création de sites web et services numériques
@@ -209,48 +285,72 @@
         </p>
 
         <a class="button"
-           href="https://wa.me/261388118935"
-           target="_blank">
+           href="#contact">
 
-            Me contacter sur WhatsApp
+            Me contacter
 
         </a>
 
     </div>
 
 
-    <!-- À PROPOS -->
+    <!-- ===== À PROPOS ===== -->
 
     <section id="apropos">
 
-        <h2>À propos de moi</h2>
+        <h2 class="section-title">
+            À propos de moi
+        </h2>
 
-        <p>
-            Je suis étudiant en Gestion et je m'intéresse
-            au développement web, aux services numériques
-            et à la création d'entreprise.
-        </p>
+        <div class="profile-card">
 
-        <p>
-            Mon objectif est de proposer des solutions
-            simples et accessibles aux particuliers,
-            étudiants et petites entreprises.
-        </p>
+            <p>
+                <strong>Nom :</strong>
+                Natolojanahary
+            </p>
+
+            <p>
+                <strong>Prénom :</strong>
+                Fetra Mamisoa Julien
+            </p>
+
+            <p>
+                <strong>Parcours :</strong>
+                Gestion
+            </p>
+
+            <p>
+                Je suis étudiant en Gestion et je m'intéresse
+                au développement web, aux services numériques
+                et à la création d'entreprise.
+            </p>
+
+            <p>
+                Mon objectif est de développer mes compétences
+                et de proposer des solutions numériques simples,
+                modernes et accessibles.
+            </p>
+
+        </div>
 
     </section>
 
 
-    <!-- SERVICES -->
+    <!-- ===== SERVICES ===== -->
 
     <section id="services">
 
-        <h2>Mes services</h2>
+        <h2 class="section-title">
+            Mes services
+        </h2>
 
         <div class="services">
 
             <div class="service">
 
-                <h3>💻 Création de sites web</h3>
+                <h3>
+                    💻 Création de sites web
+                </h3>
 
                 <p>
                     Création de sites vitrines simples,
@@ -262,12 +362,13 @@
 
             <div class="service">
 
-                <h3>📱 Services numériques</h3>
+                <h3>
+                    📱 Services numériques
+                </h3>
 
                 <p>
                     Aide dans la création de pages web,
-                    présentation de projets et solutions
-                    numériques simples.
+                    présentations et projets numériques.
                 </p>
 
             </div>
@@ -275,12 +376,13 @@
 
             <div class="service">
 
-                <h3>📚 Accompagnement</h3>
+                <h3>
+                    📚 Accompagnement
+                </h3>
 
                 <p>
-                    Accompagnement pour les débutants
-                    qui souhaitent apprendre les bases
-                    du développement web.
+                    Accompagnement des débutants qui souhaitent
+                    apprendre les bases du développement web.
                 </p>
 
             </div>
@@ -290,18 +392,22 @@
     </section>
 
 
-    <!-- PORTFOLIO -->
+    <!-- ===== REALISATIONS ===== -->
 
-    <section id="portfolio">
+    <section id="realisations">
 
-        <h2>Mes réalisations</h2>
+        <h2 class="section-title">
+            Mes réalisations
+        </h2>
 
         <div class="project">
 
-            <h3>🌐 Mon premier site web</h3>
+            <h3>
+                🌐 Mon site professionnel
+            </h3>
 
             <p>
-                Site créé avec HTML et CSS dans le cadre
+                Site web créé avec HTML et CSS dans le cadre
                 de mon apprentissage du développement web.
             </p>
 
@@ -310,11 +416,13 @@
 
         <div class="project">
 
-            <h3>🚀 Prochain projet</h3>
+            <h3>
+                🚀 Projets futurs
+            </h3>
 
             <p>
-                Cette section sera mise à jour avec mes
-                prochaines réalisations.
+                Cette section sera progressivement complétée
+                avec mes nouvelles réalisations.
             </p>
 
         </div>
@@ -322,36 +430,46 @@
     </section>
 
 
-    <!-- TARIFS -->
+    <!-- ===== TARIFS ===== -->
 
     <section id="tarifs">
 
-        <h2>Mes tarifs</h2>
+        <h2 class="section-title">
+            Tarifs
+        </h2>
 
         <div class="price">
 
-            <h3>Site vitrine</h3>
+            <h3>
+                💰 Prix sur demande
+            </h3>
 
             <p>
-                Prix sur demande
+                Pour connaître le tarif d'un service,
+                contactez-moi directement sur WhatsApp.
             </p>
 
-            <p>
-                Contactez-moi pour discuter de votre projet.
-            </p>
+            <a class="button"
+               href="#contact">
+
+                Demander un tarif
+
+            </a>
 
         </div>
 
     </section>
 
 
-    <!-- CONTACT -->
+    <!-- ===== CONTACT ===== -->
 
     <section id="contact">
 
         <div class="contact">
 
-            <h2>Contact</h2>
+            <h2 class="section-title">
+                Contact
+            </h2>
 
             <p>
                 Vous avez un projet ou une question ?
@@ -361,11 +479,13 @@
                 Contactez-moi directement sur WhatsApp.
             </p>
 
+            <!-- REMPLACER LE NUMÉRO PAR TON VRAI NUMÉRO -->
+
             <a class="button"
-               href="https://wa.me/261388118935"
+               href="https://wa.me/261XXXXXXXXX"
                target="_blank">
 
-                WhatsApp
+                💬 WhatsApp
 
             </a>
 
@@ -374,12 +494,16 @@
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- ===== FOOTER ===== -->
 
     <footer>
 
         <p>
-            © 2026 Mon Site Professionnel
+            © 2026 Fetra Mamisoa Julien
+        </p>
+
+        <p>
+            Gestion | Développement web | Services numériques
         </p>
 
         <p>
@@ -391,5 +515,4 @@
 
 </body>
 
-    </html>
-        
+            </html>
